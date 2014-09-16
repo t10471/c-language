@@ -33,3 +33,8 @@
 *.exe
 test.txt
 Debug/
+GPATH
+GRTAGS
+GSYMS
+GTAGS
+
