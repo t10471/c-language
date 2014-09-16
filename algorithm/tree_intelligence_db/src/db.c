@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <locale.h>
-#include <tchar.h>
+//#include <tchar.h>
 #include <math.h>
 #include <stdlib.h> /* randとsrandを使うため */
 #include <time.h>  /* timeを使うため */
@@ -53,6 +53,7 @@ int main(void) {
 	file_test3();
 	printf("intelligence_db_main3\n");
 	intelligence_db_main3();
+	printf("end\n");
 	return EXIT_SUCCESS;
 }
 
@@ -156,7 +157,7 @@ void intelligence_db_main2(){
 void intelligence_db_main3(){
 	Tnode *root = NULL, *p, *q1, *q2;
 	int x, i, c;
-	char filename[256] = "dbase.dat";
+	char filename[256] = "../dbase.dat";
 	srand( (unsigned)time( NULL ) );
 	fp = fopen( filename , "r" );
 	printf("3333333333333\n");
@@ -309,7 +310,7 @@ void file_test3(){
 	int ret;
 	Tnode *p;
 	p = talloc();
-	fp = fopen( "dbase.dat" , "r" );
+	fp = fopen( "../dbase.dat" , "r" );
 	if( fp == NULL ) {
 		printf( "file open error\n" );
 	}

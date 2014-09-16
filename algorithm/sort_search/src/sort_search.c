@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <string.h>
-#include <tchar.h>
+//#include <tchar.h>
 #include <math.h>
 
 
@@ -64,6 +64,7 @@ int main(void) {
 	replace_main2();
 	hash_main();
 	hash_main2();
+    printf("end");
 	return EXIT_SUCCESS;
 }
 /*

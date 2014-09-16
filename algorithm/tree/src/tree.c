@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include <string.h>
-#include <tchar.h>
+////#include <tchar.h>
 #include <math.h>
 #include <stdlib.h> /* randとsrandを使うため */
 #include <time.h>  /* timeを使うため */
@@ -105,6 +105,7 @@ int main(void) {
 	heap_main3();
 	treeform_main();
 	treeform_main2();
+    printf("end");
 	return EXIT_SUCCESS;
 }
 

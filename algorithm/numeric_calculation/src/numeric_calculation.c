@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <string.h>
-#include <tchar.h>
+// #include <tchar.h>
 #include <math.h>
 
 
@@ -95,6 +95,7 @@ int main() {
     gaussian_elimination();
     linear_programming();
     least_squares_method();
+    printf("end\n");
     return 0;
 }
 /*
@@ -180,12 +181,16 @@ void box_muller(){
  *
  */
 void brnd(double sig, double m , double *x, double *y){
-     double r1, r2;
+     double r1, r2, r3;
 
-     r1 = rand() / 32767.1;
-     r2 = rand() / (RAND_MAX + 0.1);
-     *x = sig * sqrt( -2 * log(r1)) * cos(2 * 3.14159 * r2) + m;
-     *y = sig * sqrt( -2 * log(r1)) * sin(2 * 3.14159 * r2) + m;
+     r1 = (double)rand()/RAND_MAX;
+     while( r1 == 0.0 ){
+        r1 = (double)rand()/RAND_MAX;
+     }
+     r2 = (double)rand()/RAND_MAX;
+
+     *x = sig * sqrt( -2.0 * log(r1)) * cos(2.0 * 3.14159 * r2) + m;
+     *y = sig * sqrt( -2.0 * log(r1)) * sin(2.0 * 3.14159 * r2) + m;
 }
 
 void test(){
@@ -201,7 +206,7 @@ void test(){
   * アスタリスクなしがポインタ
   */
 void test2(int *x){
-    printf("%d, %d \n",x, x);
+    printf("%d, %d \n", *x, *x);
     *x = 12;
 }
 

@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <string.h>
-#include <tchar.h>
+// #include <tchar.h>
 #include <math.h>
 
 /* 漸化式 */

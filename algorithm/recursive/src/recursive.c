@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <string.h>
-#include <tchar.h>
+//#include <tchar.h>
 #include <math.h>
 
 void factorial_recursive();
@@ -101,6 +101,7 @@ int main(void) {
 	maze4();
 	quick_main();
 	quick_main2();
+    printf("end");
 	return EXIT_SUCCESS;
 }
 

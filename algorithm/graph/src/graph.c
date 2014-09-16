@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <locale.h>
-#include <tchar.h>
+// #include <tchar.h>
 #include <math.h>
 #include <stdlib.h> /* randとsrandを使うため */
 #include <time.h>  /* timeを使うため */
