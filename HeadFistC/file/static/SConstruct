@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import SCons.Script
+import os
+base_dir = os.path.join('..', '..')
+lib_dir = os.path.join(base_dir, 'lib')
+include_dir = os.path.join(base_dir, 'include')
+
+Library('hfsecurity', ['encrypt.c', 'checksum.c'])
+Execute(Copy(lib_dir, 'libhfsecurity.a'))
+Execute(Copy(include_dir, 'encrypt.h'))
+Execute(Copy(include_dir, 'checksum.h'))
+Program('static', 'static.c',  CCFLAGS='-lm',  LIBS=['hfsecurity'], LIBPATH=lib_dir, CPPPATH=include_dir)
+

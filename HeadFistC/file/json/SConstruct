@@ -1,0 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+Program('geo2json', 'geo2json.c', CCFLAGS='-lm')
+Program('bermuda', 'bermuda.c', CCFLAGS='-lm')

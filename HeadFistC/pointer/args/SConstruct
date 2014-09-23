@@ -1,0 +1,4 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+Program('args', 'args.c', CCFLAGS='-lm')

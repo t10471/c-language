@@ -1,0 +1,4 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+Program('tree', 'tree.c', CCFLAGS='-g')

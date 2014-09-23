@@ -1,0 +1,4 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+Program('val_check', 'val_check.c', CCFLAGS='-lm')

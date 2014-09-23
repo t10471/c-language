@@ -1,0 +1,4 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+Program('union2', 'union2.c', CCFLAGS='-lm')

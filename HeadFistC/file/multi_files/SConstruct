@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import SCons.Script
+
+Program('multi_files', ['multi_files.c','encrypt.c'],  CCFLAGS='-lm')
