@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import SCons.Script
+import os
+base_dir = os.path.join('..', '..')
+lib_dir = os.path.join(base_dir, 'lib')
+include_dir = os.path.join(base_dir, 'include')
+
+env = Environment(CCFLAGS='-lm', LIBPATH=lib_dir, CPPPATH=include_dir)
+Install(include_dir,  'hfcal.h')
+# LibraryやExecuteはみなSCons.Script.SConscript.DefaultEnvironmentCall 
+#env.SharedLibrary(os.path.join(lib_dir, 'hfcal'), ['hfcal.c'])
+env.SharedLibrary(os.path.join(lib_dir, 'hfcal'), ['hfcal_uk.c'])
+env.Program('dynamic', 'dynamic.c',  CCFLAGS='-lm',  LIBS=['hfcal'])
+#soファイルをキャッシュに登録
+Execute("/sbin/ldconfig")

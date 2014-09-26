@@ -1,0 +1,3 @@
+
+gtagを作成
+gtags -v

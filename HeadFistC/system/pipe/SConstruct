@@ -1,0 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+Program('pipe', 'pipe.c', CCFLAGS='-lm')
+
