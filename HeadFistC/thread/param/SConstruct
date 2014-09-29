@@ -1,0 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+Program('param', 'param.c', CCFLAGS='-lm', LIBS=['pthread'])
+
