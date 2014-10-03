@@ -39,3 +39,4 @@ GSYMS
 GTAGS
 dbase.dat
 .sconsign.dblite
+.ctags
