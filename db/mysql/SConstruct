@@ -1,0 +1,4 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+Program('mysql', 'mysql.c', CCFLAGS='-lmysqlclient', LIBS=['mysqlclient'], CPPPATH='/usr/include/mysql')
