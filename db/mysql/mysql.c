@@ -48,10 +48,11 @@ long cast2long(char *val)
 
 int setup()
 {
-    password = get("MYSQL_ENV_MYSQL_ROOT_PASSWORD");
     hostname = get("MYSQL_PORT_3306_TCP_ADDR");
-    //portnumber = cast2long(get("MYSQL_PORT"));
     portnumber = cast2long(get("MYSQL_PORT_3306_TCP_PORT"));
+    username = get("MYSQL_ENV_MYSQL_USER");
+    password = get("MYSQL_ENV_MYSQL_PASSWORD");
+    database = get("MYSQL_ENV_MYSQL_DATABASE");
 }
 
 int connectDatabase()
