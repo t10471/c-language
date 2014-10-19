@@ -120,7 +120,7 @@ int main()
 
     /* INSERT文の実行 */
     query("INSERT INTO test (name, age) VALUES('hoge', 14)");
-
+     
     /* SELECT文の実行 */
     res = query("SELECT * FROM test;");
 
